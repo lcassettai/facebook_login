@@ -40,7 +40,7 @@
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
     <script>
-        var person = { userID: "", name: "", accessToken: "", picture: "", email: ""};
+        var person = { userID: "", nombre: "", apellido:"", accessToken: "",genero:"", email: "",apellido:""};
 
         function logIn() {
             FB.login(function (response) {
@@ -48,10 +48,11 @@
                     person.userID = response.authResponse.userID;
                     person.accessToken = response.authResponse.accessToken;
 
-                    FB.api('/me?fields=id,name,email,picture.type(large)', function (userData) {
-                        person.name = userData.name;
+                    FB.api('/me?fields=id,first_name,email,gender,last_name', function (userData) {
+                        person.nombre = userData.first_name;
+                        person.apellido = userData.last_name;
                         person.email = userData.email;
-                        person.picture = userData.picture.data.url;
+                        person.genero = userData.gender;
 
                         $.ajax({
                            url: "login.php",
