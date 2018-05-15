@@ -35,10 +35,10 @@
             </div>
         </div>
     </div>
-    <script
-            src="http://code.jquery.com/jquery-3.2.1.min.js"
-            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-            crossorigin="anonymous"></script>
+<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
     <script>
         var person = { userID: "", name: "", accessToken: "", picture: "", email: ""};
 
@@ -71,7 +71,7 @@
 
         window.fbAsyncInit = function() {
             FB.init({
-                appId            : '113852546010164',
+                appId            : '2148315702054391',
                 autoLogAppEvents : true,
                 xfbml            : true,
                 version          : 'v2.11'
