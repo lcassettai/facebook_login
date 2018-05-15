@@ -24,8 +24,10 @@
 		</div>
 		<div class="col-md-9">
 			User ID: <?php echo $_SESSION["userID"]; ?><br>
-			Name: <?php echo $_SESSION["name"]; ?><br>
+			Name: <?php echo $_SESSION["nombre"]; ?><br>
+			Apellido: <?php echo $_SESSION["apellido"]; ?><br>
 			Email: <?php echo $_SESSION["email"]; ?><br>
+			Genero: <?php echo $_SESSION["genero"]; ?><br>
 		</div>
 	</div>
 </div>

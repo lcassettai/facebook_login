@@ -1,16 +1,3 @@
-<?php
-    session_start();
-
-    if (isset($_POST['userID'])) {
-        $_SESSION['userID'] = $_POST['userID'];
-        $_SESSION['email'] = $_POST['email'];
-        $_SESSION['picture'] = $_POST['picture'];
-        $_SESSION['name'] = $_POST['name'];
-        $_SESSION['accessToken'] = $_POST['accessToken'];
-
-        exit("success");
-    }
-?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -55,14 +42,14 @@
                         person.genero = userData.gender;
 
                         $.ajax({
-                           url: "login.php",
+                           url: "f_callback.php",
                            method: "POST",
                            data: person,
                            dataType: 'text',
                            success: function (serverResponse) {
                                console.log(person);
-                               //if (serverResponse == "success")
-                                   //window.location = "index.php";
+                               if (serverResponse == "success")
+                                   window.location = "index.php";
                            }
                         });
                     });
